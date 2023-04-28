@@ -1,0 +1,18 @@
+package org.example;
+
+public class RealImage implements Img {
+    private String filename;
+
+    public RealImage(String filename) {
+        this.filename = filename;
+        loadImageFromDisk();
+}
+    @Override
+    public void display() {
+        System.out.println("Displaying " + filename);
+    }
+
+    private void loadImageFromDisk() {
+        System.out.println("Loading " + filename + " from disk");
+    }
+}
